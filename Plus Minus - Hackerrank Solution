@@ -1,0 +1,24 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{ int a[100],n,i; float n1,n2,n3;
+ n1=n2=n3=0.000000;
+  cin>>n;
+  for(i=0;i<n;i++)
+  { cin>>a[i];}
+  for(i=0;i<n;i++)
+  { if(a[i]>0)
+    {n1++;}
+    if(a[i]==0)
+    { n2++;}
+    if(a[i]<0)
+    { n3++;}
+  }
+cout.setf(ios::fixed);
+cout.setf(ios::showpoint);
+cout<<setprecision(6)<<n1/n<<endl;
+cout<<setprecision(6)<<n3/n<<endl;
+cout<<setprecision(6)<<n2/n<<endl;
+return 0;
+}
