@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{  //int n; 
+  // cin>>n;
+   long int A[100][100],sum1,n,sum2,i,j,s;
+    sum1=0; sum2=0;
+   cin>>n;
+   for( i=0;i<n;i++)
+   { for(j=0;j<n;j++)
+     cin>>A[i][j];
+   }
+    for(i=0;i<n;i++)
+    { for(j=0;j<n;j++)
+      { if(i==j)
+      { //cout<<"hello";
+          sum1+=A[i][j];}
+        if(i==n-1-j)
+        {//cout<<"bye";
+           sum2+=A[i][j];}
+      }
+    }
+    s=abs(sum1-sum2);
+    cout<<s;
+    return 0;  
+}
